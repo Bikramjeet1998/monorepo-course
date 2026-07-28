@@ -1,0 +1,18 @@
+What is Node.js?
+Why was it created?
+Is Node.js a programming language?
+Why do React and monorepo tools use it?
+
+
+1 Node.js is a runtime environment that allows JavaScript to run outside the browser.
+2 creted for the run js or other platfor outside the browser , creted files folder import packages
+
+corect ans :  Node.js was created so JavaScript could run outside the browser and perform tasks like creating servers, reading files, connecting to databases, and running development tools such as npm a
+
+
+3 Correct answer:
+
+No.
+
+Node.js is a runtime environment.
+4 Without Node.js, they cannot run. tools like npm n[x nx etc] React itself runs in the browser, but the tools used to build and develop React applications run on Node.j
