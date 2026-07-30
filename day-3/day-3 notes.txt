@@ -1,0 +1,21 @@
+1  What is a Package?
+
+    A package is code written by another developer that you can use in your project.
+
+    Package = Ready-made tool
+
+2  npm is a Package Manager.
+    Download packages
+    Install packages
+    Update packages
+    Remove packages 
+
+3   Node.js
+     │
+     ▼
+    Runs JavaScript
+
+    npm
+     │
+     ▼
+    Downloads Packages
