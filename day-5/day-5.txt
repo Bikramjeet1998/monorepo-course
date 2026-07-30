@@ -1,0 +1,14 @@
+interview qns 
+
+1 because its size may to much we cen get using npm istall
+2 package.json is th identity-card of the project and lock.json is the file where package dependencies and version can be lovked so multiple time version should be same 
+3 npm download from package registory
+4 because  one package depends on another packages its depends on multiple other packages like denependies tree  
+
+mini Quiz
+
+1  where all the package availve like playstore for mobile applications
+2  npm install axios  it install its related files, folder and stuff
+3 its important beacvuse  its lock the peojecxt depecdensios versions
+4  becuse its sixze become  to much
+5  when 1 package pepends on another its called dependencies tree
