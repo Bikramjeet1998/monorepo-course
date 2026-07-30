@@ -1,0 +1,127 @@
+Excellent! Day 4 Completed
+
+First, I want to say something.
+
+I can see a big improvement in your understanding compared to Day 1.
+
+You're now explaining concepts in your own words instead of trying to memorize definitions. That's exactly how good developers learn.
+
+Let's review your answers.
+
+✅ Q1. What is package.json?
+
+Your answer:
+
+package.json is the identity card of the project
+
+✅ 100% Correct
+
+This is exactly how I want you to remember it.
+
+✅ Q2. Where does npm run dev come from?
+
+Your answer:
+
+npm run dev comes from package.json where we describe the scripts
+
+✅ Perfect!
+
+One small addition:
+
+When you type:
+
+npm run dev
+
+npm does this internally:
+
+Read package.json
+       │
+       ▼
+Find "scripts"
+       │
+       ▼
+Find "dev"
+       │
+       ▼
+Execute that command
+
+Excellent.
+
+✅ Q3. What are Scripts?
+
+Your answer:
+
+scripts are like commands that we use to run project/file or build etc.
+
+✅ Very Good!
+
+Professional definition:
+
+Scripts are custom commands that we define inside package.json.
+
+Examples:
+
+"scripts": {
+   "dev":"vite",
+   "build":"vite build",
+   "hello":"node hello.js"
+}
+
+Then we can run
+
+npm run hello
+npm run build
+npm run dev
+
+Very good understanding.
+
+✅ Q4. Difference between dependencies and devDependencies
+
+Your answer:
+
+dependencies are core need of project
+
+✅ Correct
+
+devDependencies only needed during development
+
+✅ Excellent!
+
+Let's improve it with one sentence.
+
+dependencies	devDependencies
+Needed when the application runs	Needed only while developing
+React	Vite
+Express	ESLint
+Axios	Prettier
+
+Excellent answer.
+
+✅ Q5. Can we create our own scripts?
+
+Your answer:
+
+yes
+
+✅ Absolutely Correct.
+
+You can create ANY script.
+
+Example
+
+{
+  "scripts":{
+
+      "coffee":"echo Make Coffee",
+
+      "hello":"node hello.js",
+
+      "start-server":"php artisan serve"
+  }
+}
+
+Now you can run
+
+npm run coffee
+
+😂 npm doesn't care what the name is.
