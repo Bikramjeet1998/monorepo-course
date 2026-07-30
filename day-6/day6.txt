@@ -1,0 +1,174 @@
+🎤 Interview Questions Review
+✅ Q1. What is a module?
+
+Your answer:
+
+module is a js file where is the its related stuff
+
+✅ Correct!
+
+A more professional definition:
+
+A module is a JavaScript file that contains related code and can be imported and reused in other files.
+
+Example
+math.js
+
+Contains
+
+export function add() {}
+export function sub() {}
+
+This whole file is a module.
+
+⭐ Score: 9.5/10
+
+✅ Q2. Why do we use modules?
+
+Your answer:
+
+easy to manage, understand, multi developer work same time, save us from git conflicts
+
+⭐⭐⭐⭐⭐
+
+Excellent!
+
+This is exactly how software companies think.
+
+Benefits:
+
+Easier to read
+Easier to maintain
+Easier to debug
+Code reuse
+Multiple developers can work together
+Fewer Git conflicts
+
+Score: 10/10
+
+✅ Q3. Difference between export and import
+
+Your answer:
+
+export is like allow other to use our files
+
+import is use the other files code
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Easy way to remember:
+
+export
+
+↓
+
+"I am sharing my code."
+
+import
+
+↓
+
+"I am using someone else's code."
+
+Score: 10/10
+
+✅ Q4. Difference between Named Export and Default Export
+
+Your answer:
+
+some time export by function name {}
+
+some time default export
+
+Good!
+
+Let's make it crystal clear.
+
+Named Export
+// math.js
+
+export function add() {}
+
+export function sub() {}
+
+Import
+
+import { add, sub } from "./math.js";
+
+Notice the {}.
+
+Default Export
+export default function Button() {}
+
+Import
+
+import Button from "./Button.js";
+
+No {}.
+
+Easy Trick
+Export Type	Import Syntax
+export	import { add } from "./math.js"
+export default	import Button from "./Button.js"
+
+⭐ Score: 9/10
+
+✅ Q5. Difference between require() and import
+
+Your answer:
+
+require old way
+
+import modern ES6 way
+
+Perfect.
+
+One more detail:
+
+require()	import
+CommonJS	ES Modules
+Older Node.js	Modern JavaScript
+const fs = require("fs")	import fs from "fs"
+
+Nowadays, React, Next.js, Vite, and most new projects use import.
+
+⭐ Score: 10/10
+
+📝 Mini Quiz Review
+Q1
+
+module is js file that belongs to related code
+
+✅ Correct.
+
+Q2
+
+difficult to manage, debugging, git conflicts
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Q3
+
+export allows other to use my code
+
+✅ Correct.
+
+Q4
+
+import allows us to use other code
+
+✅ Correct.
+
+Q5
+
+while we import the non-default functions we use {}
+
+⭐⭐⭐⭐⭐
+
+Excellent!
+
+This was the trickiest question, and you got it right.

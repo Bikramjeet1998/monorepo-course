@@ -3,6 +3,7 @@
     "axios": "^1.18.1",
     "dayjs": "^1.11.21"
   },
+  "type": "module",
   "name": "monorepo-course",
   "version": "1.0.0",
   "main": "index.js",
