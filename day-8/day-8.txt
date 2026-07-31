@@ -1,0 +1,225 @@
+🎤 Interview Questions Review
+✅ Q1. What is a Repository?
+
+Your answer:
+
+repository is a folder that's tracked by git
+
+⭐⭐⭐⭐⭐ Perfect!
+
+Professional answer:
+
+A repository is a project folder that is tracked and version-controlled by Git.
+
+Score: 10/10
+
+✅ Q2. What is a Polyrepo?
+
+Your answer:
+
+polyrepo means multiple repositories multiple projects
+
+⭐⭐⭐⭐⭐
+
+Correct!
+
+One small improvement:
+
+A Polyrepo is an approach where each project has its own separate Git repository.
+
+Example:
+
+website-repo/
+
+admin-repo/
+
+api-repo/
+
+Score: 10/10
+
+✅ Q3. What is a Monorepo?
+
+Your answer:
+
+monorepo means single repository with multiple projects
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Professional answer:
+
+A Monorepo is a single Git repository that contains multiple related projects.
+
+Example:
+
+company/
+
+├── website/
+├── admin/
+├── api/
+└── ui/
+
+Score: 10/10
+
+✅ Q4. Why did companies start using Monorepos?
+
+Your answer:
+
+easy to update code, deploy, manage, understand, less time and cost
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+One important addition:
+
+The biggest reason is code sharing.
+
+Example:
+
+Button Component
+
+↓
+
+Website
+
+↓
+
+Admin
+
+↓
+
+Mobile App
+
+One component.
+
+Many applications.
+
+No duplication.
+
+Score: 10/10
+
+✅ Q5. When should we use Polyrepo?
+
+Your answer:
+
+if projects are related use monorepo otherwise use polyrepo
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+This is exactly how companies decide.
+
+Example:
+
+Monorepo ✅
+Amazon Website
+
+Amazon Admin
+
+Amazon API
+
+Amazon Shared UI
+
+All belong to the same business.
+
+Polyrepo ✅
+Hospital Management
+
+School ERP
+
+Restaurant Billing
+
+Completely unrelated businesses.
+
+Separate repositories make more sense.
+
+Score: 10/10
+
+🧩 Debugging Challenge
+
+Your answer:
+
+admin forgot to update so changes don't reflect
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Imagine this:
+
+Website Button
+
+[ Login ]
+
+Admin Button
+
+[LOGIN]
+
+Website:
+
+✅ New design
+
+Admin:
+
+❌ Old design
+
+A customer might think:
+
+"Why does the admin portal look different?"
+
+This creates an inconsistent user experience.
+
+That inconsistency is one of the problems monorepos try to reduce.
+
+📝 Mini Quiz Review
+Q1
+
+Repository is a folder tracked by Git
+
+✅ Correct.
+
+Q2
+
+Polyrepo = many repos
+
+Monorepo = one repo
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Q3
+
+changes one place impact all
+
+⭐⭐⭐⭐⭐
+
+Exactly!
+
+That's the biggest advantage.
+
+Q4
+
+Polyrepo manages projects separately
+
+Excellent.
+
+One more point:
+
+If one project has a problem, it won't directly affect the others.
+
+Q5
+
+Monorepo saves time and cost
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+Remember one important detail:
+
+Monorepo doesn't automatically deploy everything. Modern monorepo tools (like Turborepo or Nx) are smart enough to build or deploy only the projects affected by a change. We'll learn that later.
+
