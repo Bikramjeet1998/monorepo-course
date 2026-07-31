@@ -1,0 +1,258 @@
+🎤 Interview Questions
+✅ Q1. Why did we create math.js instead of writing everything inside index.js?
+
+Your answer:
+
+because easy to manage, understand and make conflicts free
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+Let's make it even more complete.
+
+We use separate modules because:
+
+✅ Easy to read
+✅ Easy to maintain
+✅ Easy to debug
+✅ Multiple developers can work together
+✅ Less Git conflicts
+✅ Code can be reused
+
+Score: 10/10
+
+✅ Q2. Why do we use "type": "module"?
+
+Your answer:
+
+to tell node.js that use latest js version like es6
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Professional answer:
+
+"type": "module" tells Node.js to use the ES Module system, so we can use import and export instead of require() and module.exports.
+
+Score: 10/10
+
+✅ Q3. What happens when we run npm start?
+
+Your answer:
+
+package file under script we mention what command should run
+
+Excellent!
+
+Let's write the complete flow together.
+
+You
+
+↓
+
+npm start
+
+↓
+
+npm opens package.json
+
+↓
+
+Looks inside "scripts"
+
+↓
+
+Finds "start"
+
+↓
+
+Runs:
+node index.js
+
+↓
+
+index.js imports math.js
+
+↓
+
+math.js returns functions
+
+↓
+
+Output appears on screen
+
+This is the exact flow.
+
+Score: 9.5/10
+
+✅ Q4. What is the benefit of npm scripts?
+
+Your answer:
+
+don't need full path easy to run
+
+⭐⭐⭐⭐⭐
+
+Exactly.
+
+Imagine this:
+
+Without scripts:
+
+node src/server/index.js
+
+With scripts:
+
+npm start
+
+Much easier.
+
+Score: 10/10
+
+✅ Q5. Can one project have many modules?
+
+Your answer:
+
+yes navbar module footer payment etc
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Large React projects may have hundreds of modules.
+
+Example:
+
+src/
+
+components/
+
+Navbar.jsx
+
+Footer.jsx
+
+Button.jsx
+
+Card.jsx
+
+pages/
+
+Home.jsx
+
+Login.jsx
+
+Dashboard.jsx
+
+utils/
+
+helper.js
+
+api.js
+
+hooks/
+
+useAuth.js
+
+useTheme.js
+
+Everything is a module.
+
+Score: 10/10
+
+🧩 Debugging Challenge
+
+You answered:
+
+because filename is incorrect Math.js should be math.js
+
+⭐⭐⭐⭐⭐
+
+Excellent!
+
+This is one of the most common bugs developers face.
+
+Suppose your file is:
+
+math.js
+
+But you write:
+
+import { add } from "./Math.js";
+On Windows
+
+It may work because Windows is often case-insensitive.
+
+On Linux or macOS
+
+It will fail because they are usually case-sensitive.
+
+That's why professional developers always match the file name exactly.
+
+📝 Mini Quiz Review
+Q1
+
+easy to manage
+
+✅ Correct
+
+Q2
+
+because index file call functions from math.js
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+Q3
+
+tell node to use ES6 import/export
+
+✅ Correct.
+
+Q4
+
+purpose is to run project
+
+Correct.
+
+One small addition:
+
+npm start runs whatever command is defined in the "start" script in package.json.
+
+Q5
+
+yes create many modules
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+🏆 Day 7 Score
+Topic	Score
+Modules	10/10
+ES Modules	10/10
+npm start	9.5/10
+npm Scripts	10/10
+Multiple Modules	10/10
+Debugging	10/10
+⭐ Overall Score
+9.9 / 10
+
+Fantastic.
+
+
+my-app/
+│
+├── package.json
+├── node_modules/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   │      ├── Navbar.jsx
+│   │      ├── Footer.jsx
+│   │      └── Button.jsx
+│   └── utils/
+│          └── helper.js
