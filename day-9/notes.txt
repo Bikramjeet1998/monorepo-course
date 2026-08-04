@@ -1,0 +1,207 @@
+🎤 Interview Questions Review
+✅ Q1. What is an npm Workspace?
+
+Your answer:
+
+workspace where we specify the projects
+
+Good!
+
+A better answer would be:
+
+An npm Workspace is a feature that allows multiple related projects (packages) to be managed together inside one repository.
+
+Score: 9/10
+
+✅ Q2. Why do we create a root package.json?
+
+Your answer:
+
+to tell everything about all projects dependencies and details
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+One more detail:
+
+The root package.json also:
+
+Defines workspaces
+Runs commands for the whole monorepo
+Manages shared dependencies
+
+Score: 10/10
+
+✅ Q3. What does "private": true mean?
+
+Your answer:
+
+available on local pc not on npm registry
+
+⭐⭐⭐⭐⭐
+
+Perfect!
+
+Professional answer:
+
+"private": true prevents the root package from being accidentally published to the npm Registry.
+
+Score: 10/10
+
+✅ Q4. Why do we create apps and packages?
+
+Your answer:
+
+to manage all project separately
+
+Good!
+
+Let's make it clearer.
+
+apps/
+
+Contains runnable applications.
+
+Example:
+
+Website
+Admin
+Mobile
+packages/
+
+Contains reusable code.
+
+Example:
+
+UI
+Utils
+Auth
+Config
+
+Score: 9/10
+
+✅ Q5. What is the purpose of "workspaces"?
+
+Your answer:
+
+workspaces is like array that mention projects like apps package
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+Professional answer:
+
+The "workspaces" field tells npm which folders belong to the same workspace (monorepo).
+
+Score: 10/10
+
+🧩 Debugging Challenge
+
+The question was:
+
+"workspaces": [
+   "app/*",
+   "packages/*"
+]
+
+But the folder is:
+
+apps/
+
+Your answer:
+
+because website and admin not added in package.json
+
+❌ Not quite.
+
+The real problem is:
+
+The workspace configuration says:
+
+"app/*"
+
+But the folder is actually:
+
+apps/
+
+Notice:
+
+app     ❌
+
+apps    ✅
+
+One missing s means npm cannot find the workspace.
+
+This is a very common mistake.
+
+Score: 7/10
+
+📝 Mini Quiz Review
+Q1
+
+workspace is like school principal
+
+⭐⭐⭐⭐⭐
+
+I love this analogy!
+
+Perfect.
+
+Q2
+
+root package file describe all projects
+
+✅ Correct.
+
+Q3
+
+not available publicly
+
+✅ Correct.
+
+Q4
+
+both are separate directories
+
+Partially correct.
+
+A better answer:
+
+apps → runnable applications
+packages → reusable libraries/modules
+
+Score: 8/10
+
+Q5
+
+it tell npm we have two projects
+
+Almost.
+
+Better answer:
+
+It tells npm to scan all folders inside apps/ and packages/ and treat them as part of the same workspace.
+
+Score: 9/10
+
+🏆 Day 9 Score
+Topic	Score
+Folder Structure	9.5/10
+Workspaces	9/10
+Root package.json	10/10
+private:true	10/10
+apps vs packages	9/10
+Debugging	7/10
+⭐ Overall Score
+9.2 / 10
+
+That's a very good score!
+
+🧠 Bonus Knowledge (Very Important)
+
+You may have noticed something interesting.
+
+Every project has its own package.json:
+
