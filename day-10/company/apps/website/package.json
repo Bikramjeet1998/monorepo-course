@@ -1,0 +1,6 @@
+{
+  "name": "website",
+  "dependencies": {
+    "@company/ui": "*"
+  }
+}

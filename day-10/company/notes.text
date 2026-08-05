@@ -1,0 +1,225 @@
+🎤 Interview Questions Review
+✅ Q1. What is a local package?
+
+Your answer:
+
+local package that's not published npm registry
+
+⭐⭐⭐⭐⭐ Perfect!
+
+Professional answer:
+
+A local package is a package that exists inside your own workspace (monorepo) and does not need to be published to the npm Registry.
+
+Example:
+
+packages/
+
+ui/
+
+auth/
+
+utils/
+
+All of these are local packages.
+
+Score: 10/10
+
+✅ Q2. Why don't we copy the Button into every project?
+
+Your answer:
+
+because we use monorepo where we place shared package one place and link another place
+
+⭐⭐⭐⭐⭐
+
+Excellent!
+
+Let's list the advantages:
+
+✅ One source of truth
+✅ Easy maintenance
+✅ No duplicate code
+✅ Fix once, update everywhere
+✅ Consistent UI
+✅ Less bugs
+
+Score: 10/10
+
+✅ Q3. Why do we give the package a name like @company/ui?
+
+Your answer:
+
+company is the root project and ui under company
+
+Very good.
+
+Let's make it more accurate.
+
+@company/ui has two parts:
+
+@company
+
+↓
+
+Scope (like a namespace)
+
+ui
+
+↓
+
+Package name
+
+Example:
+
+import Button from "@company/ui";
+
+The @company part helps organize packages and avoids name conflicts with public npm packages.
+
+Score: 9/10
+
+✅ Q4. What does "@company/ui": "*" mean?
+
+Your answer:
+
+tell npm to link with local package
+
+⭐⭐⭐⭐⭐
+
+Exactly!
+
+Professional answer:
+
+"*" tells npm to use the matching workspace package instead of downloading it from the npm Registry (when a matching workspace exists).
+
+Score: 10/10
+
+✅ Q5. How does npm know it's a local package?
+
+Your answer:
+
+automatically know about that
+
+Good idea, but let's be more precise.
+
+The correct flow is:
+
+Website
+
+↓
+
+Needs @company/ui
+
+↓
+
+Root package.json
+
+↓
+
+Checks "workspaces"
+
+↓
+
+Finds packages/ui
+
+↓
+
+Creates a local link
+
+So the root package.json is what tells npm where to look.
+
+Score: 9/10
+
+🧩 Debugging Challenge
+
+The challenge was:
+
+Website depends on:
+
+"@company/ui": "*"
+
+But the UI package is named:
+
+"name": "@company/button"
+
+Your answer:
+
+because we not defined company/ui
+
+✅ You're close.
+
+The exact reason is:
+
+Website expects:
+
+@company/ui
+
+But the package is actually named:
+
+@company/button
+
+These names must match exactly.
+
+If they don't, npm cannot find the package.
+
+This is one of the most common mistakes developers make in monorepos.
+
+Score: 8.5/10
+
+📝 Mini Quiz Review
+Q1
+
+local package not published
+
+⭐⭐⭐⭐⭐
+
+Correct.
+
+Q2
+
+easy update easy share save time
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+Q3
+
+company project links with ui package
+
+Good.
+
+One small improvement:
+
+@company/ui is the package identifier, which other apps use to import it.
+
+Q4
+
+link with workspace
+
+⭐⭐⭐⭐⭐
+
+Correct.
+
+Q5
+
+help of root package file
+
+⭐⭐⭐⭐⭐
+
+Perfect.
+
+That's exactly right.
+
+🏆 Day 10 Score
+Topic	Score
+Local Package	10/10
+Shared Packages	10/10
+Package Naming	9/10
+Workspace Dependency	10/10
+Root Workspace	9/10
+Debugging	8.5/10
+⭐ Overall Score
+9.4 / 10
+
+Excellent work!

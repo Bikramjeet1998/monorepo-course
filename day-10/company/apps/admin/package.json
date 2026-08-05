@@ -1,0 +1,6 @@
+{
+  "name": "admin",
+  "dependencies": {
+    "@company/ui": "*"
+  }
+}
