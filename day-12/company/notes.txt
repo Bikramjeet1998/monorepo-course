@@ -1,0 +1,348 @@
+🎉 Day 12 Completed — Great Work!
+
+And your screenshot confirms that both Admin and Website are successfully using the same @company/ui package. ✅
+
+You got:
+
+===== ADMIN =====
+Navbar: Travel Booking Navbar
+Card: Hotel Card
+Input: Search...
+Button: Login
+
+and:
+
+===== WEBSITE =====
+Navbar: Travel Booking Navbar
+Card: Hotel Card
+Input: Search...
+Button: Login
+
+That's exactly what we wanted.
+
+🎤 Interview Questions Review
+Q1. Why do we keep multiple components inside packages/ui?
+
+Your answer:
+
+because multiple projects like website use the same packages so we keep them in one place
+
+⭐⭐⭐⭐⭐ Correct.
+
+Better professional answer:
+
+We keep reusable components in a shared UI package so multiple applications can use the same components without duplicating code.
+
+Example:
+
+packages/ui
+   │
+   ├── Button
+   ├── Card
+   ├── Input
+   └── Navbar
+        │
+        ├── Website
+        └── Admin
+
+Score: 10/10
+
+Q2. What is the purpose of index.js?
+
+Your answer:
+
+index.js is like an entry point of file to access the modules
+
+⭐⭐⭐⭐⭐
+
+Exactly.
+
+For example:
+
+export { Button } from "./Button.js";
+export { Card } from "./Card.js";
+export { Input } from "./Input.js";
+export { Navbar } from "./Navbar.js";
+
+Then:
+
+import { Button, Card } from "@company/ui";
+
+Score: 10/10
+
+Q3. Why use @company/ui instead of a relative path?
+
+Your answer:
+
+because we don't want to expose file structure
+
+⭐⭐⭐⭐⭐ Excellent.
+
+That's an important professional concept.
+
+Instead of:
+
+import { Button } from "../../packages/ui/Button.js";
+
+we use:
+
+import { Button } from "@company/ui";
+
+The application doesn't need to know:
+
+packages/
+    ui/
+        Button.js
+
+The package itself manages its internal structure.
+
+Score: 10/10
+
+Q4. Where should the main Card code live?
+
+Your answer:
+
+packages/ui/Card.js
+
+⭐⭐⭐⭐⭐
+
+Exactly.
+
+packages/
+└── ui/
+    └── Card.js
+
+Both applications consume it.
+
+Score: 10/10
+
+Q5. What is the "Public API" of a package?
+
+Your answer:
+
+some module we want to secure from direct access so we use the Public API to access that
+
+🟡 Good understanding, but one correction.
+
+The public API isn't primarily about security.
+
+It's about controlling what the package exposes to its consumers.
+
+For example:
+
+// index.js
+
+export { Button } from "./Button.js";
+export { Card } from "./Card.js";
+
+These become part of the package's public interface.
+
+If you don't export something:
+
+InternalComponent.js
+
+then it isn't exposed through:
+
+import ... from "@company/ui"
+Better interview answer:
+
+The public API is the set of functionality that a package intentionally exposes for other applications to use.
+
+Score: 8/10
+
+🧩 Debugging Challenge
+
+Your answer:
+
+because we don't define Navbar in index.js
+
+⭐⭐⭐⭐⭐ Perfect!
+
+Exactly.
+
+If:
+
+import { Navbar } from "@company/ui";
+
+but index.js doesn't have:
+
+export { Navbar } from "./Navbar.js";
+
+then Node can't find Navbar.
+
+Your debugging thinking is getting much better. 👍
+
+Score: 10/10
+
+📝 Mini Quiz Review
+Q1. What is a shared UI package?
+
+Your answer:
+
+can be reused in multiple projects/files
+
+⭐⭐⭐⭐⭐
+
+Correct.
+
+A shared UI package contains reusable UI functionality that multiple applications can consume.
+
+10/10
+
+Q2. Why create separate component files?
+
+Your answer:
+
+all modules can be accessed from company/ui through index.js
+
+🟢 Correct idea.
+
+There's another reason:
+
+Each component has its own responsibility.
+
+Button.js  → Button
+Card.js    → Card
+Input.js   → Input
+Navbar.js  → Navbar
+
+This keeps the code organized and maintainable.
+
+9/10
+
+Q3. What is the job of index.js?
+
+Your answer:
+
+entry point where we can access all modules
+
+⭐⭐⭐⭐⭐
+
+Exactly.
+
+10/10
+
+Q4. Why share components instead of duplicating?
+
+Your answer:
+
+easy to use/update, avoids duplicate code, conflicts and errors
+
+⭐⭐⭐⭐⭐
+
+Excellent.
+
+You understand this very well now.
+
+10/10
+
+Q5. What must we do before another app can import Navbar?
+
+Your answer:
+
+export Navbar from index.js
+
+⭐⭐⭐⭐⭐
+
+Exactly:
+
+export { Navbar } from "./Navbar.js";
+
+10/10
+
+🏆 Day 12 Score
+Topic	Score
+Shared UI Package	10/10
+index.js	10/10
+Package imports	10/10
+Component organization	10/10
+Public API	8/10
+Debugging	10/10
+Mini Quiz	9.8/10
+⭐ Overall: 9.7 / 10
+
+Excellent! 🔥
+
+🧠 One Concept I Want You to Remember
+
+You now have this:
+
+                 @company/ui
+                      │
+                 index.js
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+     Button          Card          Input
+        │             │             │
+        └─────────────┼─────────────┘
+                      │
+                    Navbar
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+          Website            Admin
+
+This is a shared package.
+
+And this is the foundation we're going to use for your bigger project.
+
+🚀 Day 13 — Next Step
+
+Now we're going to introduce an important concept:
+
+Package Dependencies
+
+Right now:
+
+Website → @company/ui
+Admin   → @company/ui
+
+But imagine:
+
+Website
+   ↓
+@company/ui
+   ↓
+@company/utils
+
+Now one workspace package depends on another workspace package.
+
+For example:
+
+packages/
+├── ui/
+└── utils/
+
+ui could use utilities from utils.
+
+We'll learn:
+
+Workspace-to-workspace dependencies
+How packages depend on other packages
+Why dependency relationships matter
+How npm resolves those dependencies
+Dependency graph
+
+And we'll start getting closer to the architecture we'll eventually use for your hotel + room + bike booking platform.
+
+The next important diagram will be:
+                  company
+                     │
+             ┌───────┴───────┐
+             ▼               ▼
+          website           admin
+             │               │
+             └───────┬───────┘
+                     ▼
+                    ui
+                     │
+                     ▼
+                   utils
+
+That dependency graph is one of the most important concepts in monorepos.
+
+You're ready for it. 🚀
+
+You’re out of attachments for now. Start a free Plus trial for more, or try again tomorrow after 4:18 PM.
+Try Plus free
